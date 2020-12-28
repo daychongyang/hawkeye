@@ -1,0 +1,36 @@
+{
+  "name": "hawkeye",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "repository": "git@github.com:daychongyang/hawkeye.git",
+  "author": "daychongyang <daychongyang@gmail.com>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "node scripts/verify-commit.js"
+    }
+  },
+  "lint-staged": {
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "*.{ts,js}": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^3.6.0",
+    "chalk": "^4.1.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.1.2"
+  }
+}
