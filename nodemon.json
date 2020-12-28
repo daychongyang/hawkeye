@@ -1,0 +1,10 @@
+{
+  "verbose": true,
+  "watch": ["src"],
+  "ext": "ts json",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "ts-node -r tsconfig-paths/register ./src/main.ts",
+  "env": {
+    "__DEV__": true
+  }
+}
