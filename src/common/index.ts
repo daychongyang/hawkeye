@@ -1,8 +1,8 @@
 import http from 'http'
 import Koa from 'koa'
 
-import { logger } from './middlewares'
-import type { State, Context } from './typings'
+import { logger } from 'common/middlewares'
+import type { State, Context } from 'common/typings'
 
 interface Options {
   port: number

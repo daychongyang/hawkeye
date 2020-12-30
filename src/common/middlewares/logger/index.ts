@@ -1,6 +1,6 @@
 import { Middleware } from 'koa'
 import pino from 'pino'
-import type { State, Context } from '../../typings'
+import type { State, Context } from 'common/typings'
 
 export const logger: Middleware<State, Context> = (ctx, next) => {
   ctx.logger = pino({

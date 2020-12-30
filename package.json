@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "start": "node dist/main.js"
   },
   "husky": {
     "hooks": {
@@ -23,6 +24,10 @@
       "eslint",
       "prettier --parser=typescript --write"
     ]
+  },
+  "_moduleAliases": {
+    "@": "dist",
+    "common": "dist/common"
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",
@@ -44,6 +49,7 @@
   },
   "dependencies": {
     "koa": "^2.13.0",
+    "module-alias": "^2.2.2",
     "pino": "^6.8.0",
     "pino-pretty": "^4.3.0"
   }
