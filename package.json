@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",
+    "@types/module-alias": "^2.0.0",
     "@types/pino": "^6.3.4",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^3.6.0",

@@ -1,5 +1,6 @@
-import { Middleware } from 'koa'
 import pino from 'pino'
+
+import type { Middleware } from 'koa'
 import type { State, Context } from 'common/typings'
 
 export const logger: Middleware<State, Context> = (ctx, next) => {
@@ -12,7 +13,5 @@ export const logger: Middleware<State, Context> = (ctx, next) => {
 
   ctx.logger.trace(`${ctx.request.method} ${ctx.path}`)
 
-  return next().catch((e) => {
-    ctx.logger.error(e)
-  })
+  return next()
 }
